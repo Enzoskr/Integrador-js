@@ -25,7 +25,7 @@
   text-decoration: none;
   list-style: none;
   font-family: "poppins", sans-serif;
-  /* border: 1px solid red; */
+  border: 1px solid red;
 }
 body {
   background: var(--bg-negroclaro);
@@ -60,7 +60,7 @@ header {
 .logo {
   width: 200px;
   height: 90%;
-  --borderWidth: 3px;
+
   position: relative;
   border: 3px color transparent;
   border-image: linear-gradient(
@@ -78,7 +78,7 @@ header {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 150px;
+  gap: 100px;
   color: var(--text-color-negro);
 }
 
@@ -106,6 +106,7 @@ header {
 
 .navbar__list a {
   font-size: 14px;
+  text-align: center;
 }
 .navbar__list li:first-child > a {
   font-weight: 600;
@@ -117,6 +118,11 @@ header {
 .list__link.crear.cuenta a {
   color: var(--bg-electric);
   font-weight: 600;
+}
+
+#menu-toggle,
+.menu-label {
+  display: none;
 }
 
 /*  Main */
@@ -135,16 +141,22 @@ main {
   display: flex;
   justify-content: space-around;
   align-items: center;
-  flex-direction: ;
+  flex-direction: column;
 }
 .banners {
   display: flex;
   flex-direction: column;
   width: 90%;
+  padding: 1;
 }
 .banner {
   margin-top: 80px;
   height: 250px;
+}
+img.bannermq {
+  display: none;
+  width: 100%;
+  padding: 30px;
 }
 
 .img-hero {
@@ -157,7 +169,7 @@ main {
   width: 50%;
   align-items: center;
 }
-.hero-info h1 {
+h1 {
   font-size: 48px;
   width: 80%;
 
@@ -169,7 +181,7 @@ main {
 
   font-weight: 800;
 }
-.hero-info p {
+*/ .hero-info p {
   font-size: 14px;
   width: 70%;
   color: var(--text-color-negro);
@@ -292,6 +304,9 @@ main {
   align-items: center;
   justify-content: center;
   gap: 20px;
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
 }
 
 .category {

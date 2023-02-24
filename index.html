@@ -7,6 +7,7 @@
     <title>EnzoskR store</title>
     <link rel="stylesheet" href="./assets/style.css" />
     <link rel="stylesheet" href="./index.html">
+    <link rel="stylesheet" href="./mediaqueries.css">
 
     <script
     src="https://kit.fontawesome.com/ba6e243ea4.js"
@@ -17,11 +18,12 @@
     <header>
        <img src="./assets/login/logopagina-1.png" alt="logo" class="logo" id="box" href="#" />
        <nav class="navbar">
-       
-         <!-- <label for="menu-toggle" class="menu-label"> -->
-           <!-- <i class="fa-solid fa-bars"></i> -->
-         <!-- </label> -->
-         <!-- <input type="checkbox" id="menu-toggle"> -->
+         
+          <label for="menu-toggle" class="menu-label">
+            <i class="fa-solid fa-bars"></i>
+          </label>
+          <input type="checkbox" id="menu-toggle">
+        
          <ul class="navbar__list lista">
            <li class="list__link"><a href="#inicio"> INICIO</a></li>
            <li class="list__link"><a href="#productos">PRODUCTOS</a></li>
@@ -31,9 +33,11 @@
            <li class="list__link inicio sesion"><a href="./assets/login/login.html">INICIA SESION </a></li>
            <li class="list__link crear cuenta"><a href="./assets/login/account new/account.html">REGISTRATE </a></li>
           </ul>
+        
           <div class="cart-icon">
             <i class="fa-solid fa-cart-shopping"></i>
           </div>
+        
         </nav>
        
      </header>
@@ -41,13 +45,19 @@
       <!-- hero -->
       <section id="hero">
       <div class="banners">
-      <img src="assets/img/imagenes/hyperxbanner.jpg" class="banner" alt="hyperx">
-      <img src="assets/img/imagenes/banner logi.jpg" class="banner" alt="logitech">
+      <img src="./assets/img/imagenes/hyperxbanner.jpg" class="banner" alt="hyperx">
+      <img src="./assets/img/imagenes/banner logi.jpg" class="banner" alt="logitech"> 
     </div>
+      <div class="bannerrog">
+        <h1>ENZ-store</h1>
+      <img src="./assets/img/imagenes/asus rog.jpg" class="bannermq" alt="asusrog">
+    </div>
+      
+   
 
         <!--<div class="hero-info">
 
-         <h1>ENZ-store</h1>
+         
          <p>
           En ENZO-STORE es una tienda de componentes donde vas a ver los mejores
         precios para jugar sin ningun problemas a todos tus juegos favoritos,
@@ -84,7 +94,7 @@
         <div class="categorias">
 <button class="category active">Todos los productos</button>
 <button class="category" data-category="Monitores">Monitores</button>
-<button class="category" data-category="perisfericos">Perisféricos</button>
+<button class="category" data-category="perisfericos">Periféricos</button>
 <button class="category" data-category="placas de video">Placas de video</button>
 <button class="category" data-category="Procesadores">Procesadores</button>
 <button class="category" data-category="accesorios">Accesorios</button>
