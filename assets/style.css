@@ -25,7 +25,7 @@
   text-decoration: none;
   list-style: none;
   font-family: "poppins", sans-serif;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 body {
   background: var(--bg-negroclaro);
@@ -172,7 +172,7 @@ img.bannermq {
 h1 {
   font-size: 48px;
   width: 80%;
-
+  display: none;
   min-width: 500px;
   background: linear-gradient(to top, var(--bg-electric), var(--bg-azul));
   background-clip: text;
