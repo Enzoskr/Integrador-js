@@ -2,7 +2,7 @@
   .navbar {
     gap: 50px;
   }
-  .navbar__list.lista {
+  .navbar-list {
     position: absolute;
     top: 80px;
     left: 5%;
@@ -23,17 +23,12 @@
   .menu-label {
     display: flex;
     cursor: pointer;
-    padding: 3px;
     order: 2;
   }
-  #menu-toggle:checked + .navbar__list {
+  .open-menu {
     display: flex;
   }
-  .navbar__list.registro {
-    flex-direction: column;
-    gap: 2px;
-  }
-  .navbar__list a {
+  .navbar-list a {
     color: var(--text-color-blanco);
   }
 }
@@ -65,18 +60,7 @@
     padding: 3px;
     order: 2;
   }
-  #menu-toggle:checked + .navbar__list {
-    display: flex;
-  }
-  .navbar__list.registro {
-    flex-direction: column;
-    gap: 2px;
-  }
-  .logo {
-    height: 70%;
-    border-image: none;
-    width: 75px;
-  }
+
   .cart-icon {
     padding: 2px;
   }
@@ -137,10 +121,10 @@
   }
 
   /* footer */
-  .section-footer {
+  #section-footer {
     flex-direction: column;
   }
-  .section-footer h3 {
+  #section-footer h3 {
     margin-left: 12px;
   }
   ul.redes {

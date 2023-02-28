@@ -6,6 +6,12 @@ const categories = document.querySelector(".categorias");
 //las categorias en un htmlcollection de los botones
 const categoriesList = document.querySelectorAll(".category");
 
+const cartBtn = document.querySelector(".cart-label");
+const barsBtn = document.querySelector(".menu-label");
+const cartMenu = document.querySelector(".cart");
+const barsMenu = document.querySelector(".navbar-list");
+const overlay = document.querySelector(".overlay");
+
 let cart = JSON.parse(localStorage.getItem("cart")) || [];
 
 const savelocalstorage = (cartlist) => {
@@ -120,11 +126,53 @@ const showMoreProducts = () => {
   }
 };
 
+const toggleMenu = () => {
+  barsMenu.classList.toggle("open-menu");
+  if (cartMenu.classList.contains("open-cart")) {
+    cartMenu.classList.remove("open-cart");
+    return;
+  }
+  // overlay.classList.toggle("show-overlay");
+};
+
+const toggleCart = () => {
+  cartMenu.classList.toggle("open-cart");
+  if (barsMenu.classList.contains("open-menu")) {
+    barsMenu.classList.remove("open-menu");
+    return;
+  }
+  // overlay.classList.toggle("show-overlay");
+};
+
+const closeOnClick = (e) => {
+  if (!e.target.classList.contains("navbar-link")) {
+    return;
+  }
+  barsMenu.classList.remove("open-menu");
+  // overlay.classList.remove("show-overlay");
+};
+
+const closeOnScroll = () => {
+  if (
+    !barsMenu.classList.contains("open-menu") &&
+    !cartMenu.classList.contains("open-cart")
+  ) {
+    return;
+  }
+  barsMenu.classList.remove("open-menu");
+  cartMenu.classList.remove("open-cart");
+  // overlay.classList.remove("showoverlay");
+};
+
 //////
 const init = () => {
   renderProducts();
   categories.addEventListener("click", applyFilter);
   btnLoad.addEventListener("click", showMoreProducts);
+  barsBtn.addEventListener("click", toggleMenu);
+  cartBtn.addEventListener("click", toggleCart);
+  barsMenu.addEventListener("click", closeOnClick);
+  window.addEventListener("scroll", closeOnScroll);
 };
 
 init();
