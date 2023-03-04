@@ -173,10 +173,10 @@ const closeOnScroll = () => {
   cartMenu.classList.remove("open-cart");
 };
 const renderCardProduct = (cartProduct) => {
-  const { id, name, price, marca, cardImg, quantity } = cartProduct;
+  const { id, name, price, marca, img, quantity } = cartProduct;
   return `
   <div class="cart-item">
-  <img src=${cardImg} alt="${name}">
+  <img src=${img} alt="${name}">
   <div class="item-info">
     <h3 class="item-tittle">${name}</h3>
     <p class="item-marca">${marca}</p>
@@ -355,7 +355,6 @@ const deleteCart = () => {
 };
 
 ////// inits
-
 const init = () => {
   renderProducts();
   categories.addEventListener("click", applyFilter);
