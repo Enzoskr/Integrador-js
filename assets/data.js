@@ -2,7 +2,7 @@ const productsdata = [
   {
     id: 1,
     name: "placa de video asus rog strix Rtx 3080",
-    price: "170000 ",
+    price: "200000 ",
     marca: "Asus",
     category: "placas de video",
     cardImg: "./assets/img/productos/rogstrix 3080.jpg",
@@ -10,7 +10,7 @@ const productsdata = [
   {
     id: 2,
     name: "placa de video Msi Rtx 3080Ti",
-    price: "170000 ",
+    price: "220000 ",
     marca: "Msi",
     category: "placas de video",
     cardImg: "./assets/img/productos/ventus.jpeg",

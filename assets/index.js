@@ -103,13 +103,13 @@ const changeBtnActiveState = (selectedCategory) => {
     categoryBtn.classList.add("active");
   });
 };
-////
+
 const changeFilterState = (e) => {
   const selectedCategory = e.target.dataset.category;
   changeShowMoreBtnState(selectedCategory);
   changeBtnActiveState(selectedCategory);
 };
-///
+
 const applyFilter = (e) => {
   if (!e.target.classList.contains("category")) {
     return;
@@ -145,7 +145,6 @@ const toggleMenu = () => {
     cartMenu.classList.remove("open-cart");
     return;
   }
-  // overlay.classList.toggle("show-overlay");
 };
 
 const toggleCart = () => {
@@ -154,7 +153,6 @@ const toggleCart = () => {
     barsMenu.classList.remove("open-menu");
     return;
   }
-  // overlay.classList.toggle("show-overlay");
 };
 
 const closeOnClick = (e) => {
@@ -162,7 +160,6 @@ const closeOnClick = (e) => {
     return;
   }
   barsMenu.classList.remove("open-menu");
-  // overlay.classList.remove("show-overlay");
 };
 
 const closeOnScroll = () => {
@@ -174,7 +171,6 @@ const closeOnScroll = () => {
   }
   barsMenu.classList.remove("open-menu");
   cartMenu.classList.remove("open-cart");
-  // overlay.classList.remove("showoverlay");
 };
 const renderCardProduct = (cartProduct) => {
   const { id, name, price, marca, cardImg, quantity } = cartProduct;
@@ -293,6 +289,7 @@ const handleMinusBtnEvent = (id) => {
   const existingCartProduct = cart.find((item) => {
     return item.id === id;
   });
+
   if (existingCartProduct.quantity === 1) {
     if (window.confirm("¿Desea eliminar el producto del carrito?")) {
       removeProductFromCart(existingCartProduct);
@@ -308,7 +305,7 @@ const removeProductFromCart = (existingProduct) => {
   checkCartState();
 };
 
-const substractProductUnit = () => {
+const substractProductUnit = (existingProduct) => {
   cart = cart.map((product) => {
     return product.id === existingProduct.id
       ? { ...product, quantity: Number(product.quantity) - 1 }
@@ -357,7 +354,8 @@ const deleteCart = () => {
   );
 };
 
-//////
+////// inits
+
 const init = () => {
   renderProducts();
   categories.addEventListener("click", applyFilter);
